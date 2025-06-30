@@ -1,0 +1,7 @@
+.headerContainer {
+    display: flex;
+}
+
+body {
+    display: grid;
+}
