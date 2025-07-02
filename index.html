@@ -3,16 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jones Mabala - WD131 </title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Jones Mabala </title>
+    <meta name="description" content="Explore WDD 131 - Dynamic Web Fundamentals with Jones G Mabala. Learn the basics of HTML, CSS, responsive design, and JavaScript to build modern, interactive websites.">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,400;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
 </head>
-<header>
-    <nav>
-        <ul>
-            <li><a href="week01/basic-layout.html">week01</a></li>
-        </ul>
-    </nav>
-</header>
 <body>
-    
+    <header>
+        <span class="courseTitle">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <ul>
+                <li><a href="">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/34?lang=eng&id=p9,p14#p9">Scripture</a></li>
+                <li><a href="">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Jones G. Mabala</h1>
+        <div class="sectionContainer">
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="aboutMe">
+                    <div class="firstColumn">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat cumque iusto consectetur beatae aliquam
+                            praesentium qui ipsum porro illo rem unde atque numquam earum sunt eius culpa, quod, dolor nulla.</p>
+                        <h3>Cagayan De Oro, Philippines</h3>
+                    </div>
+                    <div class="secondColumn">
+                        <img src="/images/profile.webp" alt="Me and my family">
+                    </div>
+                </div>
+                <div class="bioGraphy">
+                    <div class="countryFlag">
+                        <img src="/images/philippine-flag.webp" alt="Flag of Philippines">
+                        <p>Official flag of Philippines</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maiores facere consectetur totam quis error
+                        veniam, dignissimos voluptates inventore odio, quos recusandae iusto provident culpa. Dolorem molestiae
+                        perspiciatis adipisci repudiandae!</p>
+                </div>
+            </section>
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <div class="resourcesContainer">
+                    <ul>
+                        <li><a href="https://www.w3schools.com/">W3 School</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/">MDN</a></li>
+                        <li><a href="https://stackoverflow.com/">Stackoverflow</a></li>
+                        <li><a href="https://pixlr.com/">Pixlr</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&#169;<span id="currentyear"></span> Jones G. Mabala - Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
