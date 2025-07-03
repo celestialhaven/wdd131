@@ -1,3 +1,5 @@
+/* large screen css design */
+
 body {
     font-family: "Barlow Semi Condensed", sans-serif;
     font-weight: 400;
@@ -144,7 +146,11 @@ footer p {
     color: #fff;
 }
 
+
+/* tablet screen css design */
+
 @media (min-width: 577px) and (max-width: 768px) {
+
     .bioGraphy {
             display: flex;
             flex-direction: column;
@@ -155,12 +161,11 @@ footer p {
         text-align: left;
     }
 
-    .bioGraphy p {
-        text-align: center;
-    }
 
  }
 
+
+ /* mobile screen css design */
 
 @media only screen and (max-width: 576px) {
 
