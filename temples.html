@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W02 Assignment: Picture Album</title>
+    <meta name="description"
+        content="Create a dynamic picture album using JavaScript to display, organize, and style images interactively.">
+    <meta name="author" content="Jones G. Mabala" />
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,400;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+    <script src="scripts/temples.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <p class="logo">Temple Album</p>
+            <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        </div>
+        <!-- Fullscreen Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <button class="close-menu" id="closeMenu">&times;</button>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul></nav>
+        </div>
+    </header>
+    <main>
+        <h1>HOME</h1>
+        <div class="figure-container">
+            <figure>
+                <img src="images/manila-philippines-temple-lds-129585-wallpaper.jpg" alt="Manila Temple">
+                <figcaption>Manila Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/aba-nigeria-temple-lds-1636397-wallpaper.jpg" alt="Aba Nigeria Temple">
+                <figcaption>Aba Nigeria Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/albuquerque-temple-lds-998219-wallpaper.jpg" alt="Albuquerque Temple">
+                <figcaption>Albuquerque Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/apia-samoa-temple-lds-460475-wallpaper.jpg" alt="Apia Samoa Temple">
+                <figcaption>Apia Samoa Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/atlanta-temple-lds-811746-wallpaper.jpg" alt="Atlanta Temple">
+                <figcaption>Atlanta Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/bern-switzerland-temple-lds-784288-wallpaper.jpg" alt="Bern Switzerland Temple">
+                <figcaption>Bern Switzerland Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/cebu-philippines-temple-lds-704567-wallpaper.jpg" alt="Cebu Temple">
+                <figcaption>Cebu Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/2-3c2316607190934fc0265f4107b5013b0cc4b21e.jpeg" alt="Arequipa Peru Temple">
+                <figcaption>Arequipa Peru Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/slctemple7.jpg" alt="Salt Lake Temple">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+    <footer>
+        <p>&#169;<span id="currentyear"></span> Jones G. Mabala - Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

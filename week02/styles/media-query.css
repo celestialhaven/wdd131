@@ -1,0 +1,30 @@
+:root {
+    --main-font: 'Roboto', sans-serif;
+    --heading-font: 'Roboto',
+        sans-serif;
+}
+
+body {
+    font-family: var(--heading-font);
+    color: #2a2a2a;
+}
+
+header, main, footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    background: #8dadf3;
+    border: 1px solid #735bf7;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+section {
+    padding: 20px;
+    background: #fff;
+}
