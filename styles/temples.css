@@ -16,6 +16,7 @@ h1 {
 }
 
 header {
+    position: sticky;
     display: flex;
     background-color: #333;
     color: white;
@@ -187,7 +188,44 @@ footer p {
     color: #fff;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        gap: 30px;
+    }
+
+    .menu-toggle,
+    .close-menu {
+        display: none;
+    }
+
+    .mobile-nav {
+        position: static;
+        transform: none;
+        visibility: visible;
+        pointer-events: auto;
+        height: auto;
+        background: none;
+        display: block;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 40px;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .figure-container {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (min-width: 768px) {
 
     header {
         display: flex;
