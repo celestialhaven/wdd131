@@ -118,6 +118,14 @@ footer p {
     color: #fff;
 }
 
+.weather-header img {
+    display: inline-block;
+}
+
+.weather-header h3::after {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .hero img {
         height: 800px;
@@ -126,6 +134,17 @@ footer p {
 
     main {
         margin: 0;
+    }
+
+    .weather-header img {
+        display: none;
+    }
+
+    .weather-header h3::after {
+        content: "⛅";
+        display: inline;
+        margin-left: 20px;
+        font-size: 40px;
     }
 }
 
