@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W03 Assignment: Country Page</title>
+    <meta name="description"
+        content="Create a dynamic  Country Page using JavaScript to display, organize, and style images interactively.">
+    <meta name="author" content="Jones G. Mabala" />
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,400;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Philippines</h1>
+    </header>
+<main>
+    <section class="hero">
+        <picture>
+            <source srcset="images/hero-small.webp" media="(max-width: 600px)">
+            <source srcset="images/hero-medium.webp" media="(max-width: 1024px)">
+            <img src="images/hero-large.webp" alt="Madagascar Lemurs">
+        </picture>
+    </section>
+    <div class="data-card">
+        <h2>Data</h2>
+        <ul>
+            <li><strong>Area:</strong> 300,000 sq km</li>
+            <li><strong>Population:</strong> 113,880,328</li>
+            <li><strong>Capital:</strong> Manila</li>
+            <li><strong>Languages:</strong> Filipino, English</li>
+            <li><strong>Currency:</strong> Philippine Peso (PHP)</li>
+            <li><strong>Time Zone:</strong> UTC+8</li>
+            <li><strong>Calling Code:</strong> +63</li>
+            <li><strong>Internet TLD:</strong> .ph</li>
+        </ul>
+    </div>
+    <div class="weather-card">
+        <div class="weather-header">
+            <h2>Weather</h2>
+            <img class="weather-icon" src="images/1530391_weather_clouds_sun_sunny_icon.svg"
+                alt="weather clouds sun sunny icon">
+        </div>
+        <ul>
+            <li><strong>Temperature:</strong> <span id="temp">30</span>°C</li>
+            <li><strong>Conditions:</strong> Sunny</li>
+            <li><strong>Wind:</strong> <span id="speed">15</span> km/h</li>
+            <li><strong>Wind Chill:</strong> <span id="chill">Loading...</span></li>
+        </ul>
+    </div> 
+</main>
+    <footer>
+        <p>&#169;<span id="currentyear"></span> Jones G. Mabala - Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

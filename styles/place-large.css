@@ -1,0 +1,6 @@
+@media (min-width: 1366px) {
+    .hero img {
+        height: 850px;
+        object-fit: cover;
+    }
+}
