@@ -89,6 +89,14 @@ const temples = [
   imageUrl:
   "https://churchofjesuschristtemples.org/assets/img/temples/kirtland-temple/kirtland-temple-1275-main.jpg"
   },
+  {
+  templeName: "Taipei Taiwan Temple",
+  location: "Taipei, Temple",
+  dedicated: "12, November, 1984",
+  area: 9945,
+  imageUrl:
+  "https://churchofjesuschristtemples.org/assets/img/temples/kirtland-temple/kirtland-temple-1275-main.jpg"
+  },
 ];
 
 function renderTemples(filteredTemples) {
