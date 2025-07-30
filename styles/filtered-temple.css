@@ -227,6 +227,10 @@ footer p {
     .nav-links li {
         margin: 0;
     }
+
+    h2 {
+        font-size: 30px;
+    }
 }
 
 @media (min-width: 768px) {
