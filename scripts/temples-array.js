@@ -99,6 +99,22 @@ const temples = [
   },
 ];
 
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const closeMenu = document.getElementById("closeMenu");
+    const mobileNav = document.getElementById("mobileNav");
+  
+    menuToggle.addEventListener("click", () => {
+      mobileNav.classList.add("show");
+      document.body.style.overflow = "hidden";
+    });
+  
+    closeMenu.addEventListener("click", () => {
+      mobileNav.classList.remove("show");
+      document.body.style.overflow = "";
+    });
+});
+
 function renderTemples(filteredTemples) {
   const container = document.getElementById("templeContainer");
   container.innerHTML = ""; // Clear existing content
