@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W02 Assignment: Picture Album</title>
+    <meta name="description"
+        content="Create a dynamic picture album using JavaScript to display, organize, and style images interactively.">
+    <meta name="author" content="Jones G. Mabala" />
+    <link rel="stylesheet" href="styles/filtered-temple.css">
+    <link rel="stylesheet" href="styles/filtered-temple-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,400;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/temples.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <p class="logo">Temple Album</p>
+            <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        </div>
+            <nav class="mobile-nav" id="mobileNav">
+                <button class="close-menu" id="closeMenu">&times;</button>
+                <ul class="nav-links">
+                    <li><a href="#" id="home">Home</a></li>
+                    <li><a href="#" id="old">Old</a></li>
+                    <li><a href="#" id="new">New</a></li>
+                    <li><a href="#" id="large">Large</a></li>
+                    <li><a href="#" id="small">Small</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Temples Around the World</h1>
+        <div class="card-container" id="templeContainer"></div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const container = document.getElementById("templeContainer");
+                    temples.forEach(temple => {
+                        const card = document.createElement("div");
+                        card.className = "temple-card";
+
+                        card.innerHTML = `
+                            <h2>${temple.templeName}</h2>
+                            <p><strong>Location:</strong> ${temple.location}</p>
+                            <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+                            <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
+                            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+                        `;
+
+                        container.appendChild(card);
+                    });
+                });
+            </script>
+    </main>
+    <footer>
+        <p>&#169;<span id="currentyear"></span> Jones G. Mabala - Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
