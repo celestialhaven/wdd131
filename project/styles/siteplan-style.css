@@ -123,6 +123,15 @@ main {
     cursor: zoom-in;
 }
 
+.lightbox-caption {
+    color: #fff;
+    font-family: var(--body-font);
+    text-align: center;
+    margin-top: 15px;
+    font-size: 18px;
+    padding: 0 20px;
+}
+
 .close {
     position: absolute;
     top: 30px;
