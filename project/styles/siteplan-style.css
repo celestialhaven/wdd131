@@ -87,6 +87,7 @@ main {
 
 .font-samples {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -152,11 +153,6 @@ main {
     .wirefram-image img {
         height: auto;
     }
-
-    .schema-container, .font-samples {
-        flex-direction: column;
-    }
-
 }
 
 @media (max-width: 768px) {
