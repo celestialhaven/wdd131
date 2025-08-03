@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-font: 'Barlow Semi Condensed', sans-serif;
+    --body-font: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: #fff;
+}
+
+main {
+    margin: 10px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--body-font);
+    background-color: #e8eaee; 
+}
+
+h1 {
+    font-family: var(--main-font);
+    color: #0d0c22;
+    font-size: 45px;
+    text-align: center;
+    padding: 10px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 450px;
+    margin: 30px auto;
+}
+
+label {
+    display: block;
+    font-family: var(--body-font);
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+select,
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: var(--body-font);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.stars {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.star-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.star-option input[type="radio"] {
+    margin-top: 5px;
+}
+
+.star-option label {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.features label {
+    display: inline;
+    font-weight: normal;
+}
+
+.features div {
+    margin-top: 10px;
+}
+
+.optional {
+    font-weight: normal;
+    font-size: 0.9em;
+    color: #555;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #175ef5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #b3b3b3;
+}
+
+.container {
+    align-content: center;
+    max-width: 500px;
+    height: 200px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    font-size: 40px;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+    padding: 5px;
+    color: #0d0c22;
+}
