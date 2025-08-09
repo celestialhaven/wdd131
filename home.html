@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jones G. Mabala">
+    <title>Celestial Virtual Assistant Agency</title>
+    <meta name="description"
+        content="Create a user-friendly product review form to collect customer feedback, ratings, and comments for better product insights.">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/tablet.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <!-- Header / Nav -->
+    <header class="site-header">
+        <div class="container">
+            <div class="brand">Celestial VA Agency</div>
+    
+            <!-- Mobile toggle -->
+            <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+    
+            <!-- Desktop nav / Mobile panel -->
+            <nav class="nav" id="primary-nav" aria-label="Primary">
+                <a href="home.html">Home</a>
+                <a href="about-us.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="pricing-plans.html">Pricing Plans</a>
+                <a href="contact-us.html" class="cta-link">Contact Us</a>
+            </nav>
+    
+            <!-- Desktop CTA (hidden on mobile) -->
+            <a class="btn btn-primary btn-small header-cta" href="contact-us.html">Book an Appointment</a>
+        </div>
+    
+        <!-- Click-off backdrop -->
+        <div class="nav-scrim" hidden></div>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <p class="eyebrow">We are here for you</p>
+                <h1 class="hero-title">The Most Trusted Virtual Assistant</h1>
+                <p class="subtext">
+                    We deliver reliable, efficient, and personalized support, helping businesses streamline tasks, boost productivity, and
+                    achieve goals with professionalism and confidentiality.
+                </p>
+                <a class="btn btn-outline" href="#">Contact Us</a>
+        
+                <picture class="hero-image">
+                    <source srcset="images/crm-mobile-screen.png" media="(max-width: 600px)">
+                    <source srcset="images/crm-laptop-screen.png" media="(max-width: 1024px)">
+                    <img src="images/crm.png" alt="CRM Tools">
+                </picture>
+            </div>
+        </section>
+        
+        <!-- Services -->
+        <section id="services" class="services">
+            <div class="container">
+                <p class="eyebrow">Our Services</p>
+                <h2 class="section-title">Our VA Services That You Can Trust</h2>
+                <p class="section-subtext">Our Comprehensive VA Services provide personalized support, streamlining your tasks, and boosting
+                productivity so you can focus on growth, success, and what matters most to you.</p>
+        
+                <!-- Desktop only: two rows of 3 -->
+                <div class="service-grid top" id="servicesTop"></div>
+                <div class="service-grid bottom" id="servicesBottom"></div>
+        
+                <!-- (Optional placeholder for your future ≤1024px carousel) -->
+                <!-- <div class="services-carousel" id="servicesCarousel"></div> -->
+            </div>
+        </section>
+        
+        <!-- Why Choose Us -->
+        <section class="why">
+            <div class="container">
+                <p class="eyebrow">Why Choose Us</p>
+                <h2 class="section-title">Heading</h2>
+                <p class="section-subtext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.
+                </p>
+        
+                <div class="icon-grid">
+                    <div class="icon-card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h4>Icon</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>
+                    <div class="icon-card">
+                        <i class="fa-solid fa-gem"></i>
+                        <h4>Icon</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>
+                    <div class="icon-card">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h4>Icon</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Dark Background Feature -->
+        <section class="dark-slab">
+            <div class="container">
+                <p class="eyebrow">Dark Background</p>
+                <h2 class="section-title">About Us</h2>
+                <p class="section-subtext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.
+                </p>
+                <a class="btn btn-primary" href="#about">Learn More</a>
+            </div>
+        </section>
+        
+        <!-- About -->
+        <section id="about" class="about">
+            <div class="container">
+                <p class="eyebrow">About Us</p>
+                <h2 class="section-title">Heading</h2>
+                <p class="section-subtext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.
+                </p>
+                <a class="btn btn-outline" href="#">Learn More</a>
+            </div>
+        </section>
+        
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <p class="eyebrow">Testimonials</p>
+                <h2 class="section-title">Heading</h2>
+                <p class="section-subtext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.
+                </p>
+        
+                <!-- Carousel (CSS scroll-snap) -->
+                <div class="carousel" aria-label="Image carousel">
+                    <div class="card placeholder"><span>Image</span>
+                        <p>Short description for image.</p>
+                    </div>
+                    <div class="card placeholder"><span>Image</span>
+                        <p>Short description for image.</p>
+                    </div>
+                    <div class="card placeholder"><span>Image</span>
+                        <p>Short description for image.</p>
+                    </div>
+                    <div class="card placeholder"><span>Image</span>
+                        <p>Short description for image.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.
+                </p>
+        
+                <form class="contact-form">
+                    <input type="text" placeholder="Full Name" aria-label="Full Name" />
+                    <input type="email" placeholder="Email Address" aria-label="Email Address" />
+                    <textarea rows="6" placeholder="Your Message" aria-label="Your Message"></textarea>
+                    <button class="btn btn-primary" type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="brand">LOGO</div>
+                <p>Short about text goes here. Keep it brief and helpful for visitors.</p>
+            </div>
+    
+            <div class="footer-col">
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="#">Service 1</a></li>
+                    <li><a href="#">Service 2</a></li>
+                    <li><a href="#">Service 3</a></li>
+                    <li><a href="#">Service 4</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-col">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-col">
+                <h5>Social Media</h5>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                </ul>
+                <a class="btn btn-small btn-outline" href="mailto:support@domain.com">support@domain.com</a>
+            </div>
+        </div>
+    
+        <div class="legal">
+            <div class="container">
+                <span>© 2025 Company</span>
+                <span>SEO and Web Design by Contact Designer</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

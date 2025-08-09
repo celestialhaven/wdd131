@@ -1,0 +1,23 @@
+@media (max-width: 1024px) {
+
+    .container .hero-title {
+        font-size: 50px;
+    }
+
+    .container .section-title {
+        font-size: 45px;
+    }
+
+    .container .service-grid {
+        display: none;
+    }
+
+    .services {
+        padding: 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr
+    }
+
+}
