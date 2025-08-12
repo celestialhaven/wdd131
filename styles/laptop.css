@@ -1,0 +1,9 @@
+@media (max-width: 1366px) {
+    .nav a {
+        font-size: 14px;
+    }
+
+    .brand {
+        font-size: 30px;
+    }
+}
