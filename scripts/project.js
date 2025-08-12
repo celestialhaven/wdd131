@@ -73,7 +73,7 @@ const SERVICES = [
     desc: "Our CRM empowers us to build stronger customer relationships, streamline sales, and deliver personalized experiences for lasting satisfaction.",
     btn: "Learn More",
     href: "pricing-plans.html",
-    img: "images/crm-image.jpg",
+    img: "images/crm-image.webp",
     mediaText: "CRM Image"
   },
   {
@@ -81,7 +81,7 @@ const SERVICES = [
     desc: "Crafting personalized, visually stunning, and user-friendly websites tailored to your brand, enhancing engagement and driving results.",
     btn: "Learn More",
     href: "pricing-plans.html",
-    img: "images/web-designin.jpg",
+    img: "images/web-designin.webp",
     mediaText: "Web Design"
   },
   {
@@ -89,7 +89,7 @@ const SERVICES = [
     desc: "Boost your brand’s presence with tailored social media marketing strategies that engage, connect, and drive customer loyalty.",
     btn: "Learn More",
     href: "pricing-plans.html",
-    img: "images/social-media-marketing.jpg",
+    img: "images/social-media-marketing.webp",
     mediaText: "Social Media Marketing"
   },
   {
@@ -105,7 +105,7 @@ const SERVICES = [
     desc: "Boost your online presence with my personalized SEO strategies, driving targeted traffic and improving search rankings.",
     btn: "Learn More",
     href: "pricing-plans.html",
-    img: "images/SEO.jpg",
+    img: "images/SEO.webp",
     mediaText: "Search Engine Optimization"
   },
   {
@@ -113,7 +113,7 @@ const SERVICES = [
     desc: "Personalized targeted ads connect your business with the right audience, increasing engagement, conversions, and customer satisfaction effectively.",
     btn: "Learn More",
     href: "pricing-plans.html",
-    img: "images/targeted-ads.jpg",
+    img: "images/targeted-ads.webp",
     mediaText: "Targetd Ads"
   }
 ];
