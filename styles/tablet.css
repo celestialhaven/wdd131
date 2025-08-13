@@ -9,7 +9,17 @@
     }
 
     .container .service-grid {
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .service-card .media{
+        height: 450px;
+    }
+    
+    .service-card h3 {
+        margin-top: 40px;
+        font-size: 30px;
     }
 
     .nav-toggle {
@@ -26,15 +36,12 @@
         margin-top: 20px;
     }
 
-    /* Fullscreen menu */
     .nav {
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
-        /* Full width */
         height: 100vh;
-        /* Full height */
         background: var(--dark);
         display: flex;
         flex-direction: column;
@@ -84,6 +91,15 @@
         padding: 0;
     }
 
+    .icon-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .why .container {
+        width: 94%;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr 1fr
     }
@@ -92,8 +108,30 @@
         width: 25%;
     }
 
+    .site-footer .container {
+        width: 100%;
+    }
+
     .footer-brand p {
         width: 100%;
+    }
+
+    /* TESTIMONIALS */
+
+    .carousel-wrapper {
+        display: block;
+    }
+
+    .card {
+        flex: 0 0 48%;
+    }
+    
+    .testimonials .container {
+        width: 100%;
+    }
+
+    .site-header .container {
+        padding: 0 15px;
     }
 
 }

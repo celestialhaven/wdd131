@@ -49,7 +49,6 @@ a {
 }
 
 .container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
     z-index: 1;
@@ -113,6 +112,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 70%;
     padding-top: 150px;
 }
 
@@ -162,7 +162,6 @@ a {
     display: block;
     width: 100%;
     height: auto;
-    /* maintain aspect ratio */
     overflow: hidden;
 }
 
@@ -182,6 +181,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 70%;
 }
 
 .services h2 {
@@ -268,35 +268,97 @@ a {
 }
 
 /* ---------- Testimonials / Carousel ---------- */
-.testimonials {
+.testimonials .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
     padding: 60px 0
 }
 
+/* Track */
 .carousel {
-    margin-top: 20px;
     display: flex;
+    transition: transform 0.4s ease-in-out;
     gap: 16px;
-    overflow: auto;
-    padding-bottom: 8px;
-    scroll-snap-type: x mandatory;
 }
 
-.carousel .card {
-    min-width: 260px;
-    padding: 16px;
-    border-radius: 16px;
-    border: 1px dashed rgba(255, 255, 255, .25);
-    scroll-snap-align: center;
-    text-align: center;
-}
-
-.carousel .card span {
+.card {
     display: block;
-    margin-bottom: 10px
+    flex: 0 0 33.333%;
+    box-sizing: border-box;
+    padding: 70px 25px;
+    text-align: center;
+    background: #171920;
+    color: var(--text);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.06);
 }
+
+.card h4 {
+    margin: 10px 0 6px;
+    color: var(--text);
+}
+
+.card p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.card img {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    border: 3px solid var(--violet);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 10px 14px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: var(--radius);
+    backdrop-filter: blur(4px);
+    transition: background .2s ease, border-color .2s ease, transform .1s ease;
+}
+
+.prev:hover,
+.next:hover {
+    background: linear-gradient(135deg, var(--violet), var(--blue));
+    border-color: transparent;
+}
+
+.prev:active,
+.next:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+.prev {
+    left: 8px;
+}
+
+.next {
+    right: 8px;
+}
+
 
 /* ---------- Contact ---------- */
 .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 70px 0;
     text-align: center
 }
@@ -321,14 +383,18 @@ a {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: var(--violet)
+    border-color: var(--violet);
 }
 
 /* ---------- Footer ---------- */
 .site-footer {
     padding-top: 40px;
     border-top: 1px solid rgba(255, 255, 255, .06);
-    background: #0d0e12
+    background: #0d0e12;
+}
+
+.site-footer .container {
+    width: 80%;
 }
 
 .footer-grid {
@@ -337,35 +403,31 @@ a {
     justify-content: space-between;
 }
 
-.footer-brand p {
-    max-width: 80%;
-}
-
 .footer-col h5 {
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 .footer-col ul {
     list-style: none;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 .footer-col li {
-    margin: 6px 0
+    margin: 6px 0;
 }
 
 .footer-col a {
-    opacity: .85
+    opacity: .85;
 }
 
 .footer-col a:hover {
-    opacity: 1
+    opacity: 1;
 }
 
 .socials i {
     width: 18px;
-    margin-right: 8px
+    margin-right: 8px;
 }
 
 .legal {
@@ -382,7 +444,6 @@ a {
     padding: 14px 24px;
 }
 
-/* Reset old header padding that caused the offset */
 .site-header {
     padding: 0 !important;
 }
@@ -403,12 +464,12 @@ a {
 /* Inner layout */
 .site-header .container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    max-width: 1600px;
+    width: 100%;
     gap: 24px;
     height: 72px;
-    padding: 0 24px;
-    /* put spacing on the inner container instead */
+    padding: 0 120px;
 }
 
 /* Brand */
@@ -424,9 +485,9 @@ a {
 /* Desktop nav (inline) */
 .nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 32px;
-    margin: auto;
 }
 
 .nav a {
@@ -488,9 +549,8 @@ a {
     top: 28px;
 }
 
-/* -----------------------------------------CARD--------------------------------------------- */
+/* --------CARD--------- */
 
-/* Layout for the desktop grids */
 .service-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -526,29 +586,26 @@ a {
 
 .service-card .media {
     height: 250px;
-    /* or keep 140px if you prefer */
     margin-bottom: 20px;
     border-radius: 12px;
     overflow: hidden;
-    /* <- prevents overlap */
 }
 
-/* Make the image fill the media box neatly */
 .service-card .media img {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
-    /* crops to fill without distortion */
 }
 
-/* ----------------------------- WHY CHOOSE US ------------------------------- */
+/* ------------ WHY CHOOSE US ------------- */
 
-.why .container, .testimonials .container, .dark-slab .container, .contact .container {
+.why .container, .dark-slab .container, .contact .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 70%;
 }
 
 .dark-slab .btn {
@@ -578,4 +635,208 @@ a {
 
 .container h5 {
     font-size: 25px;
+}
+
+.container h4 {
+    font-size: 20px;
+}
+
+/* -------------- CONTACT FORM ----------------- */
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+}
+
+.modal.is-visible {
+    display: block;
+}
+
+.modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(16, 16, 18, .7);
+}
+
+.modal__dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--dark);
+    color: var(--text);
+    width: 520px;
+    max-width: 90%;
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(233, 236, 245, .08);
+    text-align: center;
+}
+
+.modal__close {
+    margin-top: 16px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: calc(var(--radius) - 8px);
+    cursor: pointer;
+    background: linear-gradient(90deg, var(--violet), var(--blue));
+    color: #fff;
+}
+
+select {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    border: 1px solid rgba(233, 236, 245, .12);
+    background: #141419;
+    color: var(--text);
+    font-size: 16px;
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+select:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(49, 106, 255, .25);
+    background: var(--dark);
+}
+
+.submitted-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.submitted-container h1 {
+    font-size: 45px;
+}
+
+
+/* -------------------- CAROUSEL --------------- */
+
+.carousel-section {
+    padding: 16px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 12px;
+}
+
+.carousel {
+    display: flex;
+    gap: 16px;
+    transition: transform .4s ease-in-out;
+    will-change: transform;
+}
+
+/* Card */
+.card {
+    flex: 0 0 33.333%;
+    box-sizing: border-box;
+    border-radius: var(--radius);
+    background: #171920;
+    border: 1px solid rgba(255, 255, 255, .06);
+    box-shadow: var(--shadow);
+    padding: 18px;
+    text-align: center;
+}
+
+.card .media {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--violet);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
+}
+
+.card h4 {
+    margin: 10px 0 6px;
+    font-size: 18px;
+    color: var(--text);
+}
+
+.card p {
+    margin: 0 0 12px;
+    color: var(--muted);
+    line-height: 1.55;
+    font-size: 14px;
+}
+
+.card a.btn {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--violet), var(--blue));
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Controls */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+    background: rgba(255, 255, 255, .06);
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, .08);
+    padding: 10px 14px;
+    border-radius: 999px;
+    backdrop-filter: blur(4px);
+}
+
+.prev {
+    left: 8px;
+}
+
+.next {
+    right: 8px;
+}
+
+.prev:hover,
+.next:hover {
+    background: linear-gradient(135deg, var(--violet), var(--blue));
+    border-color: transparent;
+}
+
+.prev[disabled],
+.next[disabled] {
+    opacity: .4;
+    pointer-events: none;
+}
+
+/* ---------------------- PRICING PLANS ---------------------- */
+
+.pricing-plans {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+
+.pricing-plans h2 {
+    font-size: 35px;
 }

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -16,6 +18,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:wght@400;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <script src="scripts/project.js" defer></script>
 </head>
 
@@ -24,38 +28,31 @@
     <header class="site-header">
         <div class="container">
             <div class="brand">Celestial VA Agency</div>
-
             <!-- Mobile toggle -->
             <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
                 <span class="nav-toggle-bar"></span>
                 <span class="nav-toggle-bar"></span>
                 <span class="nav-toggle-bar"></span>
             </button>
-
             <!-- Desktop nav / Mobile panel -->
             <nav class="nav" id="primary-nav" aria-label="Primary">
                 <a href="home.html">Home</a>
                 <a href="pricing-plans.html">Pricing Plans</a>
                 <a href="contact-us.html" class="cta-link">Contact Us</a>
-                <a class="btn btn-primary btn-small header-cta" href="contact-us.html">Let's Get Started</a>
-            </nav>        
-        </div>
+            </nav>
 
+            <!-- Desktop CTA (hidden on mobile) -->
+            <a class="btn btn-primary btn-small header-cta" href="contact-us.html">Book an Appointment</a>
+        </div>
+        <!-- Click-off backdrop -->
         <div class="nav-scrim" hidden></div>
     </header>
-    <main style="margin-top: 120px; margin-bottom: 120px;">
-        <section id="services" class="services">
-            <div class="container">
-                <p class="eyebrow">Pricing Plans</p>
-                <h2 class="section-title">Our Pricing Plans, Made Just for You</h2>
-                <p class="section-subtext">Explore our flexible pricing plans designed to fit your needs, offering exceptional value, transparent costs, and
-                scalable options for businesses of all sizes.</p>
-                <div class="pricing-plans">
-                    <h2>All Services Starts at $10/hour</h2>
-                    <a class="btn btn-primary" href="contact-us.html">Let's Get Started</a>
-                </div>
-            </div>
-        </section>
+    <main>
+        <div class="submitted-container">
+            <h1>Thank You!</h1>
+            <p>You have successfully submitted a form to us.<br>We’ll contact you as soon as possible.</p>
+            <div class="details" id="submissionDetails"></div>
+        </div>
     </main>
     <footer class="site-footer">
         <div class="container footer-grid">
@@ -66,19 +63,20 @@
             <div class="footer-col">
                 <h5>Services</h5>
                 <ul>
-                    <li><a href="pricing-plans.html">CRM</a></li>
-                    <li><a href="pricing-plans.html">Web Designing</a></li>
-                    <li><a href="pricing-plans.html">Social Media Marketing</a></li>
-                    <li><a href="pricing-plans.html">Professional Video Editing</a></li>
-                    <li><a href="pricing-plans.html">SEO</a></li>
-                    <li><a href="pricing-plans.html">Targeted Ads</a></li>
+                    <li><a href="#">CRM</a></li>
+                    <li><a href="#">Web Designing</a></li>
+                    <li><a href="#">Social Media Marketing</a></li>
+                    <li><a href="#">Professional Video Editing</a></li>
+                    <li><a href="#">SEO</a></li>
+                    <li><a href="#">Targeted Ads</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h5>Quick Links</h5>
                 <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-col">

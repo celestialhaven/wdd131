@@ -1,4 +1,4 @@
-// left-slide-menu.js
+
 (function () {
   const body   = document.body;
   const header = document.querySelector('.site-header');
@@ -19,7 +19,7 @@
     toggle.setAttribute('aria-label','Close menu');
     scrim.hidden = false;
     lock();
-    // focus first link
+
     nav.querySelector('a, button, [tabindex]:not([tabindex="-1"])')?.focus({ preventScroll:true });
     startTrap();
   }
@@ -39,7 +39,6 @@
   nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && isOpen()) closeMenu(); });
 
-  // Close if resized back to desktop
   let raf;
   window.addEventListener('resize', ()=>{
     cancelAnimationFrame(raf);
@@ -48,7 +47,6 @@
     });
   });
 
-  /* Focus trap inside panel */
   let trapHandler = null;
   function startTrap(){
     const nodes = nav.querySelectorAll('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
@@ -144,3 +142,101 @@ function renderDesktopGrids() {
 }
 
 document.addEventListener('DOMContentLoaded', renderDesktopGrids);
+
+
+// ==== FORM POPUP =====
+
+(function () {
+  const LS_KEY = 'contactSubmissions';
+  const TEMP_KEY = 'lastContactSubmission';
+
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const fullName = document.getElementById('fullName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const service = document.getElementById('service').value;
+
+    if (!fullName || !email || !message || !service) {
+      alert('Please complete all fields.');
+      return;
+    }
+
+    const existing = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+
+    const record = {
+      id: crypto && crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
+      fullName,
+      email,
+      service,
+      message,
+      submittedAt: new Date().toISOString()
+    };
+
+    // Save to list
+    existing.push(record);
+    localStorage.setItem(LS_KEY, JSON.stringify(existing));
+
+    // Save the last submission for the thank you page
+    localStorage.setItem(TEMP_KEY, JSON.stringify(record));
+
+    // Redirect to thank you page
+    window.location.href = 'submitted.html';
+  });
+})();
+
+
+// CAROUSEL
+
+const wrapper  = document.querySelector('.carousel-wrapper');
+const carousel = wrapper.querySelector('.carousel');
+const items    = wrapper.querySelectorAll('.card');
+const prevBtn  = wrapper.querySelector('.prev');
+const nextBtn  = wrapper.querySelector('.next');
+
+let index = 0;
+
+function visibleCount() {
+  const w = window.innerWidth;
+  if (w < 768) return 1;
+  if (w <= 1024) return 2;
+  return 3;
+}
+
+function stepSize() {
+  const itemW = items[0].getBoundingClientRect().width; 
+  const styles = getComputedStyle(carousel);
+  const gap = parseFloat(styles.gap || styles.columnGap || 0); 
+  return itemW + gap;
+}
+
+function maxIndex() {
+  return Math.max(0, items.length - visibleCount());
+}
+
+function updateCarousel() {
+  // keep index within bounds
+  if (index > maxIndex()) index = maxIndex();
+  if (index < 0) index = 0;
+
+  const x = -(index * stepSize());
+  carousel.style.transform = `translateX(${x}px)`;
+}
+
+// Buttons move by a "page"
+prevBtn.addEventListener('click', () => {
+  index -= visibleCount();
+  updateCarousel();
+});
+nextBtn.addEventListener('click', () => {
+  index += visibleCount();
+  updateCarousel();
+});
+
+// Recalculate on load/resize
+window.addEventListener('resize', updateCarousel);
+window.addEventListener('load', updateCarousel);
+updateCarousel();
